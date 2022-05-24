@@ -1,0 +1,44 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <p class="h3 text-danger  fw-bold">Modifier la catégorie</p>
+            <p class="font-italic">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa eius quasi, alias repellat quis inventore hic voluptas amet tempore saepe, adipisci nulla laborum explicabo eos esse, totam sequi laboriosam recusandae illo. Id, molestiae quasi. Quasi.</p>
+
+        </div>
+    </div>
+</div>
+
+<!-- Edit Category form -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form (submit)="updateSubmit()">
+                <div class="mb-2">
+                    <input type="text" [(ngModel)]="category.name" [value]="category.name" name="name" class="form-control" placeholder="Nom catégorie">
+                </div>
+                <div class="mb-2">
+                    <input type="text" [(ngModel)]="category.description" [value]="category.description" name="description" class="form-control" placeholder="Description catégorie">
+                </div>
+                <div class="mb-2">
+                    <input type="text" [(ngModel)]="category.photo" [value]="category.photo" name="photo" class="form-control" placeholder="Photo catégorie">
+                </div>
+                <div class="mb-2">
+                    <select class="form-control">
+                        <option value="">Sélectionner un groupe</option>
+                        <option value="">groupe A</option>
+                        <option value="">groupe B</option>
+                        <option value="">groupe C</option>
+                    </select>
+                </div>
+                <div class="mb-2 d-flex justify-content-between">
+                    <input type="submit" value="Valider" class="btn btn-danger">
+                    <a routerLink="/" class="btn btn-dark ml-3"><i class="fas fa-arrow-alt-circle-left"></i> Retour</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-4" *ngIf="category.photo">
+            <img class="category-img" [src]="category.photo">
+        </div>
+    </div>
+</div>
+

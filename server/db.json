@@ -1,0 +1,52 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Aliments",
+      "description": "Nourritures et laits",
+      "photo": "https://cdn.futura-sciences.com/buildsv6/images/wide1920/a/0/3/a03d486e87_50171789_produits-janvier-mstudio-adobe-stock.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Abonnements",
+      "description": "Abonnements Assurance/Energie/Télephonie",
+      "photo": "https://www.forumdesimages.fr/media/cache/fdi_big_overview/media/fdi/36398-ecrans_web_site_forum_des_images4-4.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Habillements",
+      "description": "Habits et chaussures",
+      "photo": "https://meyer-habillement.fr/wp-content/uploads/2020/11/2020.10-92_1.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Scolarités",
+      "description": "Frais et fournitures scolaires",
+      "photo": "https://carry-on.u-bordeaux.fr/wp-content/uploads/2020/01/2382645-e1580457113126.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Boissons",
+      "description": "Bières jus et autres boissons",
+      "photo": "https://www.clcv.org/storage/app/uploads/public/3cf/c36/46b/thumb__800_0_0_0_crop.jpg"
+    },
+    {
+      "name": "Doit être fait",
+      "description": "une description",
+      "id": 6,
+      "photo": "https://www.mairieguerledan.bzh/wp-content/uploads/2020/01/sport-dessin.jpg"
+    },
+    {
+      "name": "Transports",
+      "description": "Transports réguliers et occasionnels",
+      "photo": "https://thumbs.dreamstime.com/z/transport-98226968.jpg",
+      "id": 7
+    },
+    {
+      "id": 8,
+      "name": "Now cat created",
+      "description": "description should be updated",
+      "photo": "https://img.freepik.com/vecteurs-libre/ensemble-dessin-anime-equipement-sport-balles-articles-jeu-pour-raquette-hockey-rugby-baseball-tennis-collection-bowling-boxe-golf_74855-20727.jpg?w=2000"
+    }
+  ]
+}

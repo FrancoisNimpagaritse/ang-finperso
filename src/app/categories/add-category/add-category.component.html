@@ -1,0 +1,59 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <p class="h3 text-danger  fw-bold">Ajouter catégorie</p>
+            <p class="font-italic">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa eius quasi, alias repellat quis inventore hic voluptas amet tempore saepe, adipisci nulla laborum explicabo eos esse, totam sequi laboriosam recusandae illo. Id, molestiae quasi. Quasi.</p>
+
+        </div>
+    </div>
+</div>
+
+<!-- loading -->
+<div *ngIf="loading">
+    <app-spinner></app-spinner>
+</div>
+
+<!-- error message -->
+<div *ngIf="!loading && errorMessage">
+    <div class="row">
+        <div class="col">
+            <p class="h4 text-danger fw-bold">{{errorMessage}}</p>
+        </div>
+    </div>
+</div>
+
+<!-- Create Category form -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form (submit)="createSubmit()">
+                <div class="mb-2">
+                    <input type="text" [(ngModel)]="category.name" name="name" required="true" class="form-control" placeholder="Nom catégorie">
+                </div>
+                <div class="mb-2">
+                    <input type="text" [(ngModel)]="category.description" name="description" required class="form-control" placeholder="Description catégorie">
+                </div>
+                <div class="mb-2">
+                    <input type="text" [(ngModel)]="category.photo" name="photo"  required class="form-control" placeholder="Photo">
+                </div>
+                <div class="mb-2">
+                    <select class="form-control">
+                        <option value="">Sélectionner un groupe</option>
+                        <option value="">groupe A</option>
+                        <option value="">groupe B</option>
+                        <option value="">groupe C</option>
+                    </select>
+                </div>
+                <div class="mb-2 d-flex justify-content-between">
+                    <input type="submit" value="Enregistrer" class="btn btn-danger">
+                    <a routerLink="/" class="btn btn-dark ml-3">
+                        <i class="fas fa-arrow-alt-circle-left"></i> Retour
+                    </a>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-4" *ngIf="category.photo">
+            <img class="category-img" [src]="category.photo">
+        </div>
+    </div>
+</div>
