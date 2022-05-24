@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #fcebe7 !important;
+}
+
+.category-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.category-img-big {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}

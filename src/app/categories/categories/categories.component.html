@@ -1,0 +1,68 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="com">
+            <p class="h3 text-danger fw-bold">Catégories
+                <a class="btn btn-danger btn-sm" routerLink="/categories/add">
+                <i class="fa fa-plus-circle"></i> Nouveau
+                </a>
+            </p>
+            <p class="font-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ex quidem, ad vitae beatae laudantium deleniti assumenda pariatur quisquam tempore magni sit dolor. Nesciunt ea incidunt asperiores a. Nostrum nihil magni eius eaque ab consequatur alias vero iste maxime quod.</p>
+            <form action="">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" name="" class="form-control" placeholder="Chercher une catégorie">
+                            </div>
+                            <div class="col">
+                                <input type="submit" value="Chercher" class="btn btn-outline-dark">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- loading -->
+<div *ngIf="loading">
+    <app-spinner></app-spinner>
+</div>
+
+<!-- error message -->
+<div *ngIf="!loading && errorMessage">
+    <div class="row">
+        <div class="col">
+            <p class="h4 text-danger fw-bold">{{errorMessage}}</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="container mt-3 p-0" *ngIf="!loading && categories.length > 0">
+    <div class="row">
+        <div class="col-md-6" *ngFor="let category of categories">
+            <div class="card list-group-item-danger shadow-lg my-2">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-sm-4">
+                            <img class="category-img" [src]="category.photo" alt="">
+                        </div>
+                        <div class="col-sm-7">
+                            <ul class="list-group">
+                                <li class="list-group-item">Nom: <strong>{{category.name}}</strong></li>
+                                <li class="list-group-item">Description: <strong>{{category.description}}</strong></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-1 d-flex flex-column justify-content-center align-items-center">
+                            <a routerLink="/categories/view/{{category.id}}" class="btn btn-warning my-1"><i class="fa fa-eye"></i></a>
+                            <a routerLink="/categories/edit/{{category.id}}" class="btn btn-primary my-1"><i class="fa fa-pencil"></i></a>
+                            <button (click)="clickDeleteCategory(category.id)" class="btn btn-danger my-1"><i class="fa fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
